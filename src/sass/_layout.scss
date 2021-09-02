@@ -2,20 +2,25 @@ body {
   background-color: $color-body-background-light;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   max-width: 1000px;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .sidebar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
   background-color: $color-sidebar-background-dark;
   color: $color-white;
-  width: 200px;
   height: 100vh;
-  position: fixed;
 }
 
 // .sidebar__logo {
@@ -25,9 +30,10 @@ body {
 // }
 
 .main {
-  position: absolute;
-  left: 200px;
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 10;
 }
 
 .main__nav {
@@ -36,10 +42,9 @@ body {
   justify-content: flex-end;
   background-color: red;
   z-index: 1;
-  height: 50px;
+  height: 8vh;
   top: 0;
-  position: fixed;
-  width: 800px;
+  position: sticky;
 }
 
 .main__section {
@@ -47,8 +52,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   background-color: blue;
-  top: 50px;
-  margin-top: 0px;
-  position: absolute;
+  margin: 2vh;
   box-shadow: -5px -10px 20px -5px #999;
+  height: 88vh;;
+  overflow-y: hidden;
 }
