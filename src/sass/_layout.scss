@@ -2,7 +2,7 @@ body {
   background-color: $color-body-background-light;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .container {
@@ -54,5 +54,6 @@ body {
   background-color: blue;
   margin: 2vh;
   box-shadow: -5px -10px 20px -5px #999;
-  height: 88vh;
+  height: 88vh;;
+  overflow-y: hidden;
 }
