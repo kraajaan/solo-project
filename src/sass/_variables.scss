@@ -2,7 +2,18 @@
 $color-white: #fff;
 $color-brand-main: #ff0000;
 $color-body-background-light: #f5f5f2;
-$color-sidebar-background-dark: #333;
+$color-sidebar-background-dark: #191919;
+$color-text-darkgrey: #979797;
+$color-text-grey: #9c9c9c;
+$color-text-sidebar-manager: #797979;
+$color-sidebar-list-border-botttom: #333;
+$color-text-content-title: #a2a2a2;
+$color-div-border: #e3e3e3;
+$color-text-blue: #56819f;
+$color-sidebar-border-orange: #f58220;
+$color-sidebar-list-background-active: #282828;
+$color-dot-green: #04ae00;
+$color-theme-orange: #f58220;
 
 /* Font sizes */
 $paragraph-font-size: 16px;
@@ -10,3 +21,6 @@ $paragraph-font-size: 16px;
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
 $paragraph-font: "Open Sans", Helvetica, Arial;
+$font-logo: 'Just Another Hand', cursive;
+
+$transition: all 0.3s ease-out;
