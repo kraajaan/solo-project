@@ -366,6 +366,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 15px 0;
 }
 
 .content__section > div::after {
@@ -390,6 +391,7 @@ body {
   color: $color-text-content-title;
   text-transform: uppercase;
   padding-left: 20px;
+  margin: 0;
   // line-height: 1.2*$paragraph-font-size;
   // padding: 0;
 }
@@ -400,6 +402,7 @@ button {
   margin: 15px 0;
   cursor: pointer;
   font-size: 1.5*$paragraph-font-size;
+  line-height: 1.5*$paragraph-font-size;
   font-family: $paragraph-font;
   color: $color-white;
   font-weight: 300;
@@ -414,17 +417,122 @@ button.orange:hover {
   background-color: $color-button-orange-hover;
 }
 
+button.orange--refresh {
+  padding: 10px 12px;
+  font-size: 1*$paragraph-font-size;
+  line-height: 1*$paragraph-font-size;
+}
+
+.content__section--general .datepicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+// .datepicker__form {
+//   border-radius: 5px;
+//   border: 1px solid $color-div-border;
+//   padding: 10px;
+//   position: relative;
+// }
+
+.datepicker__form {
+  margin-right: 15px;
+}
+
+.datepicker__form div{
+  display: inline;
+}
+
+.datepicker__form div:nth-child(1){
+  border-radius: 5px;
+  border: 2px solid $color-div-border;
+  padding: 10px;
+  position: relative;
+  border-right: 0px solid $color-div-border;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding-right: 0px;
+}
+
+.datepicker__form div:nth-child(1)::before{
+  content: '';
+  width: 1px;
+  height: 80%;
+  display: block;
+  z-index: 1;
+  top: 50%;
+  left: 45%;
+  background-color: $color-div-border;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+.datepicker__form div:nth-child(2){
+  border-radius: 5px;
+  border: 2px solid $color-div-border;
+  padding: 10px;
+  position: relative;
+  border-left: 0px solid $color-div-border;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+
+// .datepicker__form::before {
+// #date-start::before {
+//   content: '';
+//   width: 1px;
+//   height: 80%;
+//   display: block;
+//   z-index: 1;
+//   top: 50%;
+//   left: 90%;
+//   background-color: $color-div-border;
+//   position: absolute;
+//   transform: translate(-50%,-50%);
+// }
+
+.datepicker__form input {
+  border: 0px solid black;
+  width: 120px;
+  font-family: $paragraph-font;
+}
+
+.datepicker__form input:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// .datepicker__form input:active {
+//   outline: none;
+//   -webkit-tap-highlight-color: transparent;
+// }
+
+.datepicker__form input[type="date"]::-webkit-inner-spin-button,
+.datepicker__form input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
 .content__section--links table {
   width: 90%;
   border-collapse: collapse;
 }
 
 .content__section--links table tr {
-border-bottom: 1px solid $color-div-border;
+  border-bottom: 1px solid $color-div-border;
 }
 
 .content__section--links table tr:hover {
-background-color: $color-links-table-hover;
+  background-color: $color-links-table-hover;
 }
 
 .content__section--links table td {
@@ -441,7 +549,7 @@ background-color: $color-links-table-hover;
 .content__section--links table td.icons {
   width: 20%;
   padding: 0;
-  text-align:center
+  text-align: center;
 }
 
 .content__section--links table td.icons i {
