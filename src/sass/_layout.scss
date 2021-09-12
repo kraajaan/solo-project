@@ -522,6 +522,110 @@ button.orange--refresh {
   -webkit-appearance: none;
 }
 
+.data__stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 60px;
+}
+
+.data__stats > div {
+  width: calc((100% - 62px)*0.45);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-div-border;
+  padding: 5px 0;
+  font-family: $paragraph-font;
+  font-size: 0.8*$paragraph-font-size;
+}
+
+.data__stats > div > span:nth-child(1) {
+  color: $color-links-table;
+  font-weight: 700;
+}
+
+.data__stats > div > span:nth-child(2) {
+  text-align: right;
+}
+
+.data__chart {
+  width: 90%;
+}
+
+.data__chart > h3 {
+  margin: 40px 0 0;
+  font-size: 0.9*$paragraph-font-size;
+  color: $color-links-table;
+  font-weight: 700;
+  font-family: $paragraph-font;
+}
+
+.data__chart > div {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+// .data__chart > div.img {
+//   overflow-x: auto;
+// }
+//
+.data__chart div.img img {
+  width: 100%;
+  // min-width: 800px;
+}
+
+.button--chart {
+  color: $color-text-blue;
+  font-family: $paragraph-font;
+  font-size: $paragraph-font-size;
+  margin: 5px 15px;
+  padding: 8px 15px 8px 40px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.button--chart:not(.active):hover {
+  border: 1px solid $color-div-border;
+}
+
+.button--chart.active {
+  color: $color-links-table;
+  background-color: $color-button-chart-active;
+}
+
+.button--chart::before{
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  z-index: 1;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  top: 50%;
+  left: 20px;
+  background-color: #000;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+.button--chart.signups::before{
+  background-color: $color-chart-dot-blue;
+}
+
+.button--chart.FTD::before{
+  background-color: $color-chart-dot-orange;
+}
+
+.button--chart.earned::before{
+  background-color: $color-chart-dot-green;
+}
+
 .content__section--links table {
   width: 90%;
   border-collapse: collapse;
@@ -621,6 +725,10 @@ button.orange--refresh {
     max-height: 70px;
   }
 
+  .sidebar.close {
+    max-height: 100vh;
+  }
+
   .main__nav {
     display: none;
   }
@@ -642,9 +750,17 @@ button.orange--refresh {
     display: none;
   }
 
+  .sidebar.close .sidebar__list {
+    display: block;
+  }
+
   .sidebar__manager {
     display: none;
-    background-color: red;
+  }
+
+  .sidebar.close .sidebar__manager {
+    display: block;
+    margin-bottom: 20px;
   }
 
   .sidebar__logo > p {

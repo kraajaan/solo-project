@@ -1,17 +1,16 @@
 // const elem = document.querySelector('div[id="foo"]');
 
 
-const elem2 = document.getElementById('form__input');
-
+const elem1 = document.getElementById('form__input');
 const elemCalendar = document.querySelector('div.calendar');
-console.log(elem2);
+console.log('elem1:', elem1);
 
 elemCalendar.addEventListener('click', function(e){
   e.preventDefault();
   console.log('test');
 
   // eslint-disable-next-line no-undef
-  const rangepicker = new DateRangePicker(elem2, {// eslint-disable-line no-unused-vars
+  const rangepicker = new DateRangePicker(elem1, {// eslint-disable-line no-unused-vars
     // ...options
     format: 'yyyy-mm-dd',
   });
@@ -41,3 +40,16 @@ document.getElementById('date-end').valueAsDate = tomorrow;
 //   // ...options
 //   format: 'dd.mm.yyyy',
 // });
+
+const elem2 = document.getElementById('burger-menu');
+const elem3 = document.querySelector('.sidebar');
+// const elem4 = document.querySelector('.sidebar__list');
+
+elem2.addEventListener('click', function(e){
+  e.preventDefault();
+
+  elem2.classList.toggle('close');
+  elem3.classList.toggle('close');
+  // elem4.classList.toggle('close');
+
+});
