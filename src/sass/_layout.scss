@@ -227,6 +227,7 @@ body {
   font-family: $paragraph-font;
 }
 
+
 // #burger-menu:hover span {
 //   transform: rotate(-45deg);
 //   top: 0px;
@@ -269,6 +270,10 @@ body {
   background-color: $color-white;
   margin-bottom: 15px;
   border: 2px solid $color-div-border;
+}
+
+.main__nav--mobile {
+  display: none;
 }
 
 .main__nav > div {
@@ -587,6 +592,7 @@ button.orange--refresh {
   background-color: transparent;
   border: 1px solid transparent;
   position: relative;
+  transition: $transition;
 }
 
 .button--chart:not(.active):hover {
@@ -763,6 +769,12 @@ button.orange--refresh {
     margin-bottom: 20px;
   }
 
+  .sidebar.close .main__nav--mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
   .sidebar__logo > p {
     margin-left: 30px;
     margin-right: 5px;
@@ -770,6 +782,51 @@ button.orange--refresh {
 
 
 }
+
+
+@media screen and (max-width: 520px) {
+  .main__nav--mobile > div {
+    width: 30px;
+    justify-content: center;
+  }
+
+  .main__nav--mobile > div:nth-child(1) {
+    width: 30px;
+    justify-content: center;
+    border-right: 2px solid $color-div-border;
+  }
+
+  .main__nav--mobile a.profile {
+    display: none;
+  }
+
+  .main__nav--mobile a.wallet {
+    font-size: 0;
+  }
+
+  .main__nav--mobile i {
+    transform: scale(1);
+    transition: $transition;
+    display: block;
+  }
+
+  .main__nav--mobile i:hover {
+    display: block;
+    transform: scale(1.2);
+    transition: $transition;
+    color: $color-text-blue;
+  }
+
+  .main__nav--mobile a.wallet i.icon-wallet {
+    font-size: $paragraph-font-size*1.25;
+    margin: 0;
+  }
+
+  .main__nav--mobile a.wallet i.icon-arrow-down {
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 400px) {
   .main {

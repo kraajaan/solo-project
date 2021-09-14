@@ -3,7 +3,7 @@
 
 const elem1 = document.getElementById('form__input');
 const elemCalendar = document.querySelector('div.calendar');
-console.log('elem1:', elem1);
+// console.log('elem1:', elem1);
 
 elemCalendar.addEventListener('click', function(e){
   e.preventDefault();
@@ -51,5 +51,27 @@ elem2.addEventListener('click', function(e){
   elem2.classList.toggle('close');
   elem3.classList.toggle('close');
   // elem4.classList.toggle('close');
+
+});
+
+
+
+const elem4 = document.querySelector('.general__buttons');
+// const elem4 = document.querySelector('.sidebar__list');
+
+elem4.addEventListener('click', function(e){
+  e.preventDefault();
+
+  const checkButton = e.target;
+
+  // elem2.classList.toggle('close');
+  if (checkButton.tagName == 'BUTTON'){
+    // console.log('e.target.type:', e.target.type);
+    // console.log('e.target.tagName:', e.target.tagName);
+    // console.log(checkButton.classList[1]);
+
+    const elem5 = document.getElementsByClassName(checkButton.classList.value);
+    elem5[0].classList.toggle('active');
+  }
 
 });
