@@ -58,6 +58,7 @@ elem2.addEventListener('click', function(e){
 
 const elem4 = document.querySelector('.general__buttons');
 // const elem4 = document.querySelector('.sidebar__list');
+// const elem4 = document.querySelector('.sidebar__list');
 
 elem4.addEventListener('click', function(e){
   e.preventDefault();
