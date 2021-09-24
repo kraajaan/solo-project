@@ -161,10 +161,9 @@ const chart = new Chart(ctx, {
     }]
   },
   options: {
-    legend: {
-      display: false,
-      labels: {
-        fontColor: '#333'
+    plugins: {
+      legend: {
+        display: false,
       }
     }
   },
